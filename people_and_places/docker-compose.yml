@@ -19,7 +19,7 @@ services:
       - db
     volumes:
       # Add the absolute path
-      - /Users/prateekasthana/Desktop/Projects/People_and_Places/people_and_places/app/data/:/app/data/
+      - app/data/:/app/data/
     environment:
       MYSQL_HOST: db
       MYSQL_USER: user

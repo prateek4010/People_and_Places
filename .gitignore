@@ -1,0 +1,8 @@
+# Package files
+*.jar
+
+# JetBrains IDE
+.idea/
+
+# module files
+*.iml

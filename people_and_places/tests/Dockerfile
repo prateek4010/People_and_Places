@@ -2,7 +2,7 @@
 FROM python:3
 
 # Set the working directory inside the container
-WORKDIR /people_and_places
+WORKDIR /tests
 
 # Copy the requirements file and install dependencies
 COPY requirements.txt .
@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Set the command to run your Python script
-CMD [ "python", "app/main.py" ]
+CMD [ "pytest" ]

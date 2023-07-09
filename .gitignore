@@ -6,3 +6,6 @@
 
 # module files
 *.iml
+
+# pycache
+*.pyc

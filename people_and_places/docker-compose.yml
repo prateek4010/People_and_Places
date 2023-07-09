@@ -11,17 +11,23 @@ services:
     ports:
       - 3306:3306
 
-  people_and_places:
+  app:
     build:
-      context: .
+      context: ./app
     restart: on-failure
     depends_on:
       - db
     volumes:
       # Add the absolute path
-      - /data/:/people_and_places/data/
+      - /Users/prateekasthana/Desktop/Projects/People_and_Places/people_and_places/app/data/:/app/data/
     environment:
       MYSQL_HOST: db
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       MYSQL_DATABASE: database
+
+  tests:
+    build:
+      context: ./tests
+    depends_on:
+      - db

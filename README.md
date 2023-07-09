@@ -27,6 +27,11 @@ If you want to restart the app container only:
 make run-app
 ```
 
+If you want to run the tests container only:
+```bash
+make run-tests
+```
+
 ### Stop Services
 To stop the services, run the following command:
 ```bash

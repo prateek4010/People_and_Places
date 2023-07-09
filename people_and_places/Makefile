@@ -1,4 +1,5 @@
-APP_DIR := people_and_places
+APP_DIR := app
+TEST_DIR := tests
 
 build:
 	docker-compose build
@@ -8,6 +9,9 @@ run:
 
 run-app:
 	docker-compose up $(APP_DIR)
+
+run-tests:
+	docker-compose up $(TEST_DIR)
 
 stop-services:
 	docker-compose down --remove-orphans
